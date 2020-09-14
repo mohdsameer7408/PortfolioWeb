@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Portfolio</title>
+        <!-- css -->
+        <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="nav-wrapper" id="top">
+                <label for="toggle">&#9776</label>
+                <input type="checkbox" id="toggle" />
+                <div class="left-side">
+                    <div class="nav-link-wrapper active-nav-link">
+                        <a href="./index.html">HOME</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="./about.html">ABOUT</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="./details.html">DETAILS</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="./account.html">SIGN IN</a>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="brand">
+                        <div><a href="">codeArt</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-wrapper">
+                <div class="details-left" style="background-image: url(./images/pic1.jpg);">
+                </div>
+                <div class="details-right">
+                    <div class="details-logo">
+                        <img src="./images/logos/faq-ico.jpg" alt="" />
+                    </div>
+                    <div class="details-subtitle">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptas aliquam hic reiciendis delectus dolor odio, sequi accusantium, magni natus necessitatibus quo quisquam iure quidem aut tempore, accusamus iusto autem cumque et nihil. Quam quae voluptate quis ex sunt ab pariatur magni eius alias quaerat commodi sapiente quisquam excepturi, ratione iusto? Ipsa quae perspiciatis, sequi accusamus quisquam esse tenetur quam molestias quos pariatur explicabo sint dolorem suscipit tempore vel in eveniet placeat! Officia quae dolorem quia beatae repellendus at numquam ducimus, hic harum laboriosam unde, impedit maiores. Minima, praesentium? Totam tempore modi officia atque doloribus autem culpa eligendi neque laborum?
+                    </div>
+                </div>
+            </div>
+            <h4 style="text-align: center;"><a href="#top">&uArr;</a></h4>
+            <div class="row">
+                <p>
+                    Copyright &copy;
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script>
+                    All rights reserved | This template is made with by
+                    <a href="#" target="_blank" style="color: #fff;">codeArt</a>
+                </p>
+            </div>
+        </div>
+    </body>
+                    
+    <script>
+        const portfolioItems = document.querySelectorAll(".portfolio-item-wrapper");
+        portfolioItems.forEach((portfolioItem) => {
+            portfolioItem.addEventListener("mouseover", () => {
+                portfolioItem.childNodes[1].classList.add("img-darken");
+            });
+
+            portfolioItem.addEventListener("mouseout", () => {
+                portfolioItem.childNodes[1].classList.remove("img-darken");
+            });
+        });
+
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 50 ||
+                document.documentElement.scrollTop > 50
+            ) {
+                document.getElementsByClassName("nav-wrapper")[0].style.padding =
+                    "10px 38px";
+            } else {
+                document.getElementsByClassName("nav-wrapper")[0].style.padding =
+                    "38px";
+            }
+        }
+    </script>
+                
+</html>
